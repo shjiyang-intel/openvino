@@ -496,7 +496,7 @@ ov::AnyMap get_baseline_common_config(const std::optional<NPUDesc>& npudesc) {
         {"NPUW_DCOFF_TYPE", "f16"},
         {"NPUW_DCOFF_SCALE", "YES"},
         {"NPUW_WEIGHTS_BANK", "shared"},
-        {"NPUW_SLICE_OUT", "YES"},
+        {"NPUW_SLICE_OUT", "NO"},
         {"NPUW_FUNCALL_ASYNC", "YES"}};
     // FIXME: this config logic is getting more and more complex
     if (npudesc.has_value() && npudesc->compiler_dq) {
